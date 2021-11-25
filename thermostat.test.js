@@ -9,7 +9,15 @@ describe("Thermostat class", () => {
   it("Increase temperature using up method", () => {
     const thermostat = new Thermostat();
     thermostat.up();
-    expect(thermostat.up()).toEqual;
+    thermostat.up();
+    expect(thermostat.getTemperature()).toEqual(22);
+  });
+
+  it("Decrease temperature using down method", () => {
+    const thermostat = new Thermostat();
+    thermostat.down();
+    thermostat.down();
+    expect(thermostat.getTemperature()).toEqual(18);
   });
 });
 
